@@ -1,0 +1,8 @@
+.confirmButton{
+    width: 100%;
+}
+
+#yesButton, #noButton{
+    width: 50%
+}
+

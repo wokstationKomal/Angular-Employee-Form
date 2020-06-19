@@ -1,0 +1,28 @@
+{
+  "Employee": [
+    {
+      "fname": "Komal",
+      "lname": "wakhede",
+      "email": "test@gmail.com",
+      "Monumber": 1234567890,
+      "gender": "F",
+      "password": "123ewq",
+      "houseNo": 8,
+      "street": "Hingna",
+      "city": "NGP",
+      "id": 1
+    },
+    {
+      "fname": "pratiksha",
+      "lname": "wan",
+      "email": "testGyahho.com",
+      "Monumber": 987654322,
+      "gender": "F",
+      "password": "mvxsdfg",
+      "houseNo": 234,
+      "street": "Jaytada",
+      "city": "HYD",
+      "id": 2
+    }
+  ]
+}

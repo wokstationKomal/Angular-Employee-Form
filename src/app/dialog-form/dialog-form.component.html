@@ -1,0 +1,114 @@
+<form [formGroup]=employeeRegister>
+    <!-- {{employeeRegister.value | json}} -->
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <input type="text" 
+            placeholder="First Name" 
+            class="form-control"
+            formControlName = "fname"
+            [(ngModel)] = "empService.currentEmployee.fname"
+            [class.is-invalid]="FirstName.invalid &&
+                                FirstName.touched" >
+
+             <div *ngIf="FirstName.invalid &&
+                         FirstName.touched">
+                    <small *ngIf="FirstName.errors?.required"
+                        class="text-danger">First Name Required
+                    </small>
+            </div>
+        </div>
+
+        
+
+        <div class="col-md-6 form-group">
+            <input type="text" 
+            placeholder="Last Name" 
+            class="form-control"
+            formControlName = "lname"
+            [(ngModel)] = "empService.currentEmployee.lname"
+            >
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <input type="email" 
+            placeholder="email" 
+            class="form-control"
+            formControlName = "email"
+            [(ngModel)] = "empService.currentEmployee.email"
+            >
+        </div>
+        <div class="col-md-6 form-group">
+            <input type="number" 
+            placeholder="Mobile Number" 
+            class="form-control"
+            formControlName = "Monumber"
+            [(ngModel)] = "empService.currentEmployee.Monumber"
+            >
+
+            <div *ngIf="MobileNo.invalid && MobileNo.touched">
+                <small *ngIf="MobileNo.errors?.required" class="text-danger">Mobile required</small>
+                <small *ngIf="MobileNo.errors?.minLength" class="text-danger">Min length must me 3</small>     
+            </div>  
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <input type="text" 
+            placeholder="gender" 
+            class="form-control"
+            formControlName = "gender"
+            [(ngModel)] = "empService.currentEmployee.gender"
+            >
+        </div>
+
+        <div class="col-md-6 form-group">
+            <input type="text" 
+            placeholder="password" 
+            class="form-control"
+            formControlName = "password"
+            [(ngModel)] = "empService.currentEmployee.password"
+            >
+        </div>
+    </div>
+
+    <div class="row" formGroupName="address">
+        <div class="col-md-4 form-group">
+            <input type="number" 
+            placeholder="House No." 
+            class="form-control"
+            formControlName = "houseNo"
+            [(ngModel)] = "empService.currentEmployee.houseNo"
+            >
+        </div>
+
+        <div class="col-md-4 form-group">
+            <input type="text" 
+            placeholder="street" 
+            class="form-control"
+            formControlName = "street"
+            [(ngModel)] = "empService.currentEmployee.street"
+            >
+        </div>
+
+        <div class="col-md-4 form-group">
+            <input type="text" 
+            placeholder="City" 
+            class="form-control"
+            formControlName = "city"
+            [(ngModel)] = "empService.currentEmployee.city"
+            >
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <button class="btn btn-success btn-block btn-lg" (click)="postData(empService.currentEmployee)">
+                <i class="fa fa-save"></i>Save</button>
+        </div>
+    </div>
+</form>
+
